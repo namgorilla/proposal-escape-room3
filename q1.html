@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>문제 1 - 해외 여행지</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: sans-serif; text-align: center; background-color: #f9f9f9; padding: 10px; }
+        img { max-width: 90%%; height: auto; margin: 10px auto; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); display: block; }
+        input, button {
+            padding: 12px;
+            font-size: 16px;
+            margin: 10px auto;
+            width: 90%%;
+            max-width: 300px;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        button { background-color: #4CAF50; color: white; border: none; }
+        #result { color: red; font-weight: bold; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h2>우리가 처음 떠난 해외 여행지는?</h2>
+    <img src="fukuoka1.jpg" alt="후쿠오카 사진 1" width="200">
+    <img src="fukuoka2.jpg" alt="후쿠오카 사진 2" width="200">
+    <img src="fukuoka3.jpg" alt="후쿠오카 사진 3" width="200">
+    <p>힌트: 이치란 라멘, Gucci, 캐널시티</p>
+
+    <input type="text" id="answer" placeholder="여행지 이름을 입력하세요" />
+    <button onclick="checkAnswer()">확인</button>
+
+    <p id="result"></p>
+
+    <script>
+    function checkAnswer() {
+        const answer = document.getElementById('answer').value.trim();
+        if (answer === "후쿠오카") {
+            window.location.href = "q2.html";
+        } else {
+            document.getElementById('result').innerText = "다시 생각해보세요!";
+        }
+    }
+    </script>
+</body>
+</html>
